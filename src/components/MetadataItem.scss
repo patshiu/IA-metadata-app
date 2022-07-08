@@ -1,0 +1,20 @@
+@import '_variables.scss';
+
+dl {
+  width: 100%;
+  dt{
+    color: $c-lighter;
+    display: inline-block;
+    width: 29%;
+    &::after {
+      content: ":";
+    }
+  }
+  dd{
+    color: $c-medium;
+    display: inline-block;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+  }
+}
