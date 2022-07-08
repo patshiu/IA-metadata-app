@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ReviewItem = ({ review }) => {
   return (
     <div>
-      <h5>{review.reviewtitle}</h5>
+      <h1>{review.reviewtitle}</h1>
       <h6>
         by {review.reviewer} on {review.reviewdate}
       </h6>

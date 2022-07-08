@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import './MetadataItem.scss';
 
 const MetadataItem = ({ label, description }) => {
@@ -27,7 +26,7 @@ const MetadataItem = ({ label, description }) => {
 
 MetadataItem.propTypes = {
   label: PropTypes.string.isRequired,
-  description: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array])
 };
 
 export default MetadataItem;

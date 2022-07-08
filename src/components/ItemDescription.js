@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ItemDescription = ({ description }) => {
-  return <p>{description}</p>;
+  return <div dangerouslySetInnerHTML={{ __html: description }} />;
 };
 
 ItemDescription.propTypes = {

@@ -1,11 +1,13 @@
 @import '_variables.scss';
 
 dl {
-  width: 100%;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
   dt{
     color: $c-lighter;
     display: inline-block;
-    width: 29%;
+    width: 20%;
     &::after {
       content: ":";
     }
@@ -13,7 +15,7 @@ dl {
   dd{
     color: $c-medium;
     display: inline-block;
-    width: 70%;
+    width: 79%;
     margin: 0;
     padding: 0;
   }
