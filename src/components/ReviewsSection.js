@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import SectionTitle from './SectionTitle';
 import ReviewItem from './ReviewItem';
 
 const ReviewsSection = ({ reviews }) => {
   if (!reviews) {
     return (
       <div className="section item-reviews">
-        <h3>Reviews</h3>
+        <SectionTitle title="Reviews" count={null} />
         <p>This item has no reviews.</p>
       </div>
     );
   } else {
     return (
       <div className="section item-reviews">
-        <h3>Reviews ({Object.keys(reviews).length})</h3>
+        <SectionTitle title="Reviews" count={Object.keys(reviews).length} />
         {reviews.map((review, index) => (
           <ReviewItem key={review.review_id ? review.review_id : index} review={review} />
         ))}

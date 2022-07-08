@@ -1,11 +1,11 @@
-@import '_variables.scss';
+@import '../variables';
 
 dl {
   display: inline-flex;
   padding: 0;
   margin: 0;
   dt{
-    color: $c-lighter;
+    color: $c-light;
     display: inline-block;
     width: 20%;
     &::after {

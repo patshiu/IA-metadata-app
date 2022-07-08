@@ -1,9 +1,11 @@
 import axios from 'axios';
 
-const fetch = (itemIdentifier) => {
+const fetchMetadata = (itemIdentifier) => {
   const url = 'https://archive.org/metadata/' + itemIdentifier;
-  console.log('url is: ', url);
-  return axios.get(url);
+  return axios
+    .get(url)
+    .then((res) => res.data)
+    .catch((e) => console.log('An error occurred while fetching item metadata:', e));
 };
 
-export default { fetch };
+export default fetchMetadata;
