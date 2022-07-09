@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import SectionTitle from './SectionTitle';
 import MetadataItem from './MetadataItem';

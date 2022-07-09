@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const SectionTitle = ({ title, count }) => {
   if (count) {
     return (
-      <h1>
+      <h2>
         {title} ({count})
-      </h1>
+      </h2>
     );
   } else {
     return <h1>{title}</h1>;

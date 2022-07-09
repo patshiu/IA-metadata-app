@@ -6,7 +6,7 @@ const ItemDescription = ({ description }) => {
 };
 
 ItemDescription.propTypes = {
-  description: PropTypes.string
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 };
 
 export default ItemDescription;
