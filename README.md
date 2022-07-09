@@ -1,4 +1,6 @@
 # Simple IA Metadata App
+### Demo: https://ia-metadata-viewer.onrender.com/
+This app displays the metadata, reviews, and related items for any item in the internet archive.
 
 Requirements:  [Front-End Coding Challenge](https://docs.google.com/document/d/19tGoS6RbJcLhnYHsFmjFmRIyuHi6NtKIAWjglE6pE2w/edit#).
 
@@ -22,15 +24,15 @@ yarn global add serve
 serve -s build
 ```
 ---
-## Using the App 
-This app displays the metadata, reviews, and related items for any item in the internet archive.  
-  
+## Using the App   
 Items may also be accessed with this URL pattern: 
 http://localhost:3000/{itemIdentifier}
 https://ia-metadata-viewer.onrender.com/{itemIdentifier}
   
-The dropdown contains sample items from each media type. 
+The dropdown contains sample items from each [media type](https://archive.org/services/docs/api/metadata-schema/index.html#mediatype). 
 ![dropdown screenshot goes here]
+  
+Note that media embeds are only possible for `texts`, `movies`, `software`, and `image` media types.  
   
 ---
 
