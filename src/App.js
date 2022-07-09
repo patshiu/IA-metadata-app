@@ -18,7 +18,7 @@ import fetchRelated from './services/relatedItems';
 const App = () => {
   const match = useMatch('/:id');
   let itemUID;
-  if (match.params) {
+  if (match) {
     itemUID = match.params.id;
   }
   const [itemIdentifier, setItemIdentifier] = useState(itemUID ? itemUID : 'InformationM');

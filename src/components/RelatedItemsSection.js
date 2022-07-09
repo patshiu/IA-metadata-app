@@ -5,7 +5,6 @@ import SectionTitle from './SectionTitle';
 import RelatedItem from './RelatedItem';
 
 const RelatedItemsSection = ({ relatedItems, setItemIdentifier }) => {
-  console.log(relatedItems);
   if (!relatedItems) {
     return (
       <div className="row">
