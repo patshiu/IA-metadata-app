@@ -1,0 +1,25 @@
+
+@import '../variables';
+
+dl {
+  div {
+    display: flex;
+    dt {
+        color: $c-light;
+        display: inline-flex;
+        width: 20%;
+      
+        &::after {
+          content: ":";
+        }
+      }
+    
+      dd {
+        color: $c-medium;
+        display: inline-flex;
+        width: 79%;
+        margin: 0;
+        padding: 0;
+      }
+  }
+}

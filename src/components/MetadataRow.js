@@ -1,0 +1,26 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import './MetadataRow.scss';
+
+const MetadataRow = ({ label, description }) => {
+  if (Array.isArray({ description })) {
+    let parsedDescription = '';
+    description.map((item) => {
+      parsedDescription += ', ' + String(item);
+    });
+    description = parsedDescription;
+  }
+  return (
+    <div>
+      <dt>{label}</dt>
+      <dd>{description}</dd>
+    </div>
+  );
+};
+
+MetadataRow.propTypes = {
+  label: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array])
+};
+
+export default MetadataRow;

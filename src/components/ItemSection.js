@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MediaEmbed from './MediaEmbed';
 import ItemKeyInfo from './ItemKeyInfo';
-import MetadataFullList from './MetadataFullList';
+import MetadataSection from './MetadataSection';
 import ReviewsSection from './ReviewsSection';
 import RelatedItemsSection from './RelatedItemsSection';
 
@@ -16,7 +16,7 @@ const ItemSection = ({ itemIdentifier, itemMetadata, itemRelatedItems }) => {
           title={itemMetadata.metadata.title}
           description={itemMetadata.metadata.description}
         />
-        <MetadataFullList metadata={itemMetadata.metadata} />
+        <MetadataSection metadata={itemMetadata.metadata} />
         <ReviewsSection reviews={itemMetadata.reviews} />
         <RelatedItemsSection relatedItems={itemRelatedItems} />
       </div>
