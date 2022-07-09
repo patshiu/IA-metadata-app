@@ -30,7 +30,7 @@ http://localhost:3000/{itemIdentifier}
 https://ia-metadata-viewer.onrender.com/{itemIdentifier}
   
 The dropdown contains sample items from each [media type](https://archive.org/services/docs/api/metadata-schema/index.html#mediatype). 
-![dropdown screenshot goes here]
+![Dropdown of sample media](dropdown-screenshot.png)
   
 Note that media embeds are only possible for `texts`, `movies`, `software`, and `image` media types.  
   
