@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './RelatedItemSection.scss';
+
 import SectionTitle from './SectionTitle';
 import RelatedItem from './RelatedItem';
 
-const RelatedItemsSection = ({ relatedItems, setItemIdentifier }) => {
+const RelatedItemsSection = ({ relatedItems }) => {
   if (!relatedItems) {
     return (
       <div className="row">
@@ -22,12 +24,7 @@ const RelatedItemsSection = ({ relatedItems, setItemIdentifier }) => {
           <div className="related-cards-container">
             {relatedItems.map((item, index) => {
               return (
-                <RelatedItem
-                  key={index}
-                  itemSource={item._source}
-                  itemIdentifier={item._id}
-                  setItemIdentifier={setItemIdentifier}
-                />
+                <RelatedItem key={index} itemSource={item._source} itemIdentifier={item._id} />
               );
             })}
           </div>
@@ -38,8 +35,7 @@ const RelatedItemsSection = ({ relatedItems, setItemIdentifier }) => {
 };
 
 RelatedItemsSection.propTypes = {
-  relatedItems: PropTypes.array,
-  setItemIdentifier: PropTypes.func.isRequired
+  relatedItems: PropTypes.array
 };
 
 export default RelatedItemsSection;

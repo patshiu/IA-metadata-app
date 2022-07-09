@@ -7,12 +7,14 @@ import './MetadataFullList.scss';
 
 const MetadataFullList = ({ metadata }) => {
   return (
-    <div className="item-metadata-full-list padded">
-      <SectionTitle title="Full Metadata" count={Object.keys(metadata).length} />
+    <div className="row">
+      <div className="item-metadata-full-list section padded">
+        <SectionTitle title="Full Metadata" count={Object.keys(metadata).length} />
 
-      {Object.keys(metadata).map((key) => {
-        return <MetadataItem key={key} label={key} description={metadata[key]} />;
-      })}
+        {Object.keys(metadata).map((key) => {
+          return <MetadataItem key={key} label={key} description={metadata[key]} />;
+        })}
+      </div>
     </div>
   );
 };

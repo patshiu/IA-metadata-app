@@ -1,19 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
 import './SampleItemsSelector.scss';
 
-const SampleItemsSelector = ({ setItemIdentifier }) => {
+const SampleItemsSelector = () => {
   const navigate = useNavigate();
   const setExampleItem = (event) => {
     event.preventDefault();
-    setItemIdentifier(event.target.value);
     navigate('/' + event.target.value, { replace: false });
   };
 
   return (
-    <div className="sample-items-section row">
+    <div className="sample-items-row row">
       <div className="section">
         <h3>[Media Type] Item Identifier:</h3>
         <div>
@@ -40,10 +38,6 @@ const SampleItemsSelector = ({ setItemIdentifier }) => {
       </div>
     </div>
   );
-};
-
-SampleItemsSelector.propTypes = {
-  setItemIdentifier: PropTypes.func.isRequired
 };
 
 export default SampleItemsSelector;

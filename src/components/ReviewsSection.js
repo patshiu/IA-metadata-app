@@ -7,18 +7,22 @@ import ReviewItem from './ReviewItem';
 const ReviewsSection = ({ reviews }) => {
   if (!reviews) {
     return (
-      <div className="item-reviews">
-        <SectionTitle title="Reviews" count={null} />
-        <p>This item has no reviews.</p>
+      <div className="row">
+        <div className="section item-reviews">
+          <SectionTitle title="Reviews" count={null} />
+          <p>This item has no reviews.</p>
+        </div>
       </div>
     );
   } else {
     return (
-      <div className="item-reviews">
-        <SectionTitle title="Reviews" count={Object.keys(reviews).length} />
-        {reviews.map((review, index) => (
-          <ReviewItem key={review.review_id ? review.review_id : index} review={review} />
-        ))}
+      <div className="row">
+        <div className="section item-reviews">
+          <SectionTitle title="Reviews" count={Object.keys(reviews).length} />
+          {reviews.map((review, index) => (
+            <ReviewItem key={review.review_id ? review.review_id : index} review={review} />
+          ))}
+        </div>
       </div>
     );
   }
