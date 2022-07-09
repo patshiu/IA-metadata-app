@@ -2,14 +2,15 @@ import { useState, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
 import '../node_modules/vital-css/dist/css/vital.min.css';
+// import '../node_modules/vital-css/dist/scss/vital.css.scss';
 import './App.scss';
 
 import SampleItemsSelector from './components/SampleItemsSelector';
+import MediaEmbed from './components/MediaEmbed';
 import ItemTitle from './components/ItemTitle';
 import ItemDescription from './components/ItemDescription';
-import MediaEmbed from './components/MediaEmbed';
-import ReviewsSection from './components/ReviewsSection';
 import MetadataFullList from './components/MetadataFullList';
+import ReviewsSection from './components/ReviewsSection';
 import RelatedItemsSection from './components/RelatedItemsSection';
 
 import fetchMetadata from './services/metadata';
@@ -26,25 +27,20 @@ const App = () => {
   const [itemMetadata, setItemMetadata] = useState({});
   const [itemRelatedItems, setItemRelatedItems] = useState({});
 
-  const fetchData = (itemIdentifier) => {
+  const fetchData = async (itemIdentifier) => {
     setDataFetched(false);
-    fetchMetadata(itemIdentifier)
-      .then((data) => {
-        console.log('metadata promise fulfilled');
-        setItemMetadata(data);
-      })
-      .then(() => {
-        fetchRelated(itemIdentifier)
-          .then((data) => {
-            console.log('related items fetched');
-            setItemRelatedItems(data);
-          })
-          .then(() => {
-            console.log('Both metadata and related items fetched.');
-            setDataFetched(true);
-            window.scrollTo(0, 0);
-          });
-      });
+
+    const metadata = await fetchMetadata(itemIdentifier);
+    console.log('metadata promise fulfilled');
+    setItemMetadata(metadata);
+
+    const related = await fetchRelated(itemIdentifier);
+    console.log('related items fetched');
+    setItemRelatedItems(related);
+
+    console.log('Both metadata and related items fetched.');
+    setDataFetched(true);
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
