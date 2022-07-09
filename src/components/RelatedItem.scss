@@ -5,7 +5,7 @@
 
   .related-item-card {
       border: 1px solid $base-darker;
-      border-radius: 0.5rem;
+      border-radius: $border-radius-md;
       overflow: hidden;
       background-color: $base-lighter;
       box-sizing: border-box;

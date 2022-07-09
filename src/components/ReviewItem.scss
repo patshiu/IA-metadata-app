@@ -1,0 +1,8 @@
+@import '../variables';
+.review-item {
+  border: 1px solid $base-darker;
+  border-radius: $border-radius-sm;
+  background: $base-lighter;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}

@@ -4,13 +4,13 @@ import '../node_modules/vital-css/dist/css/vital.min.css';
 import './App.scss';
 
 import SampleItemsSelector from './components/SampleItemsSelector';
-import MetadataItem from './components/MetadataItem';
 import ItemTitle from './components/ItemTitle';
 import ItemDescription from './components/ItemDescription';
 import MediaEmbed from './components/MediaEmbed';
 import ReviewsSection from './components/ReviewsSection';
 import RelatedItem from './components/RelatedItem';
 import SectionTitle from './components/SectionTitle';
+import MetadataFullList from './components/MetadataFullList';
 
 import fetchMetadata from './services/metadata';
 import fetchRelated from './services/relatedItems';
@@ -68,21 +68,15 @@ const App = () => {
               <ItemTitle title={itemMetadata.metadata.title} />
               <ItemDescription description={itemMetadata.metadata.description} />
               <div className="section item-key-metadata">{/* DISPLAY KEY METADATA HERE */}</div>
-
-              <div className="item-metadata-full-list">
-                <SectionTitle
-                  title="Full Metadata"
-                  count={Object.keys(itemMetadata.metadata).length}
-                />
-                {Object.keys(itemMetadata.metadata).map((key) => {
-                  return (
-                    <MetadataItem key={key} label={key} description={itemMetadata.metadata[key]} />
-                  );
-                })}
+            </div>
+            <div className="row">
+              <div className="section">
+                <MetadataFullList metadata={itemMetadata.metadata} />
+              </div>
+              <div className="section">
+                <ReviewsSection reviews={itemMetadata.reviews} />
               </div>
             </div>
-
-            <ReviewsSection reviews={itemMetadata.reviews} />
 
             <div className="row">
               <div className="section">
@@ -94,6 +88,7 @@ const App = () => {
                         key={index}
                         itemSource={item._source}
                         itemIdentifier={item._id}
+                        setItemIdentifier={setItemIdentifier}
                       />
                     );
                   })}

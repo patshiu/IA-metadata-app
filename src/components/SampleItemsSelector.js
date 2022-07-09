@@ -8,7 +8,7 @@ const SampleItemsSelector = ({ setItemIdentifier }) => {
   const setExampleItem = (event) => {
     event.preventDefault();
     setItemIdentifier(event.target.value);
-    navigate('/' + event.target.value, { replace: true });
+    navigate('/' + event.target.value, { replace: false });
   };
 
   return (
@@ -42,7 +42,7 @@ const SampleItemsSelector = ({ setItemIdentifier }) => {
 };
 
 SampleItemsSelector.propTypes = {
-  setItemIdentifier: PropTypes.any
+  setItemIdentifier: PropTypes.func.isRequired
 };
 
 export default SampleItemsSelector;
