@@ -13,9 +13,9 @@ const SampleItemsSelector = () => {
   return (
     <div className="sample-items-row row">
       <div className="section">
-        <h3>[Media Type] Item Identifier:</h3>
         <div>
           <form>
+            <label>[Media Type] Item Identifier:</label>
             <select id="example-items-dropdown" name="exampleItems" onChange={setExampleItem}>
               <option value="–"> — </option>
               <option value="artistfileeames">[text] artistfileeames</option>

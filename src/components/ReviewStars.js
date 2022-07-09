@@ -8,8 +8,8 @@ const ReviewStars = ({ reviewStars }) => {
       starsIcon = '★' + starsIcon;
       starsIcon = starsIcon.slice(0, 5);
     }
-
-    return <>{starsIcon}</>;
+    const aria = 'Rating: ' + reviewStars + ' of 5 stars';
+    return <div aria-role={aria}>{starsIcon}</div>;
   } else {
     return null;
   }

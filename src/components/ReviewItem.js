@@ -6,11 +6,11 @@ import './ReviewItem.scss';
 
 const ReviewItem = ({ review }) => {
   return (
-    <div className="review-item">
-      <h2>{review.reviewtitle}</h2>
-      <h5>
+    <div className="review-item" aria-label="review">
+      <h3>{review.reviewtitle}</h3>
+      <div>
         <ReviewStars reviewStars={review.stars} /> by {review.reviewer} on {review.reviewdate}
-      </h5>
+      </div>
       <p>{review.reviewbody}</p>
     </div>
   );

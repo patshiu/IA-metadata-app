@@ -2,15 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SectionTitle = ({ title, count }) => {
-  if (count) {
-    return (
-      <h2>
-        {title} ({count})
-      </h2>
-    );
-  } else {
-    return <h1>{title}</h1>;
-  }
+  return (
+    <h2>
+      {title} {count ? '(' + count + ')' : ''}
+    </h2>
+  );
 };
 
 SectionTitle.propTypes = {
