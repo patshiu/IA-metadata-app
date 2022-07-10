@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const MediaEmbediFrame = ({ itemIdentifier, height }) => {
   return (
-    <div className="embed-container row">
+    <div className="embed-container row" data-testid="media-embed-iframe">
       <div className="section">
         <iframe
           title={itemIdentifier}

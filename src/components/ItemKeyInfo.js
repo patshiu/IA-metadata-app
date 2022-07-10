@@ -6,7 +6,7 @@ import ItemDescription from './ItemDescription';
 
 const ItemKeyInfo = ({ title, description }) => {
   return (
-    <div className="row">
+    <div className="row" data-testid="item-key-info">
       <div className="section">
         <ItemTitle title={title} />
         <ItemDescription description={description} />

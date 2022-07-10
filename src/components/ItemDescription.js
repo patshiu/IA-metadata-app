@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ItemDescription = ({ description }) => {
   // Content fetched from known MAPI, should be safe.
   return (
-    <div>
+    <div data-testid="item-description">
       <div dangerouslySetInnerHTML={{ __html: description }} />
     </div>
   );

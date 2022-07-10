@@ -10,7 +10,7 @@ const MediaEmbed = ({ mediaType, itemIdentifier }) => {
   if (!hasEmbed) {
     return null;
   } else if (mediaType === 'audio' || mediaType === 'etree') {
-    return <MediaEmbediFrame itemIdentifier={itemIdentifier} height="60" />;
+    return <MediaEmbediFrame itemIdentifier={itemIdentifier} height={60} />;
   } else {
     return <MediaEmbediFrame itemIdentifier={itemIdentifier} />;
   }
