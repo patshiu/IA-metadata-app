@@ -1,0 +1,35 @@
+// Only import elements from Vital that we need
+
+// Vendor
+
+@import "../node_modules/vital-css/dist/scss/vital/normalize";
+
+// Components
+
+@import "../node_modules/vital-css/dist/scss/vital/variables";
+@import "./_variables"; //custom color variables and overrides
+
+@import "../node_modules/vital-css/dist/scss/vital/mixins";
+@import "../node_modules/vital-css/dist/scss/vital/icons";
+@import "../node_modules/vital-css/dist/scss/vital/grid";
+
+@import "../node_modules/vital-css/dist/scss/vital/base";
+// @import "../node_modules/vital-css/dist/scss/vital/buttons";
+// @import "../node_modules/vital-css/dist/scss/vital/footer";
+@import "../node_modules/vital-css/dist/scss/vital/forms";
+// @import "../node_modules/vital-css/dist/scss/vital/header";
+// @import "../node_modules/vital-css/dist/scss/vital/heroes";
+@import "../node_modules/vital-css/dist/scss/vital/loaders";
+// @import "../node_modules/vital-css/dist/scss/vital/notice";
+// @import "../node_modules/vital-css/dist/scss/vital/pagination";
+// @import "../node_modules/vital-css/dist/scss/vital/tables";
+// @import "../node_modules/vital-css/dist/scss/vital/tabs";
+// @import "../node_modules/vital-css/dist/scss/vital/syntax";
+@import "../node_modules/vital-css/dist/scss/vital/helpers";
+
+// Optional Layouts
+
+// @import "../node_modules/vital-css/dist/scss/vital/layouts/background_cards";
+// @import "../node_modules/vital-css/dist/scss/vital/layouts/photo_collages";
+// @import "../node_modules/vital-css/dist/scss/vital/layouts/feed_cards";
+// @import "../node_modules/vital-css/dist/scss/vital/layouts/bordered_lists";

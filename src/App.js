@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
 
-import '../node_modules/vital-css/dist/css/vital.min.css';
-// import '../node_modules/vital-css/dist/scss/vital.css.scss';
+import './vitalCustom.scss';
 import './App.scss';
 
 import LoadingSpinner from './components/LoadingSpinner';

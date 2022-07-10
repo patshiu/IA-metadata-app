@@ -24,9 +24,9 @@ $accent-color-alt: #064EF2;
 
 // Vital.css Overrides
 // Hover
-// $link: $red;
-// $hover: $red-bright;
-// $focus: rgba(255, 0, 0, 0.2);
+$link: $accent-color;
+$hover: $accent-color-alt;
+$focus: rgba(0, 145, 255, 0.2);
 
 
 // Border radius - e.g. panels
