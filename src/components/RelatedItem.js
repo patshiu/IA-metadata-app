@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './RelatedItem.scss';
-import ItemTitle from './ItemTitle';
 
 const RelatedItem = ({ itemSource, itemIdentifier }) => {
   return (
@@ -12,7 +11,7 @@ const RelatedItem = ({ itemSource, itemIdentifier }) => {
         <img
           src={'https://archive.org/services/img/' + itemIdentifier}
           className="card-hero"
-          alt-text={'thumbnail for ' + ItemTitle}
+          alt-text={'Thumbnail for ' + itemSource.title}
         />
         <div className="card-content">
           <h3>
