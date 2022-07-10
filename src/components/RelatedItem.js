@@ -11,7 +11,7 @@ const RelatedItem = ({ itemSource, itemIdentifier }) => {
         <img
           src={'https://archive.org/services/img/' + itemIdentifier}
           className="card-hero"
-          alt-text={'Thumbnail for ' + itemSource.title}
+          alt={'Thumbnail for ' + itemSource.title}
         />
         <div className="card-content">
           <h3>
