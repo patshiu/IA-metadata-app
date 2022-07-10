@@ -5,7 +5,7 @@ dl {
   div {
     display: flex;
     dt {
-        color: $c-light;
+        color: $c-medium;
         display: inline-flex;
         width: 20%;
       
@@ -15,7 +15,7 @@ dl {
       }
     
       dd {
-        color: $c-medium;
+        color: $c-strong;
         display: inline-flex;
         width: 79%;
         margin: 0;
