@@ -6,6 +6,7 @@ import './App.scss';
 
 import LoadingSpinner from './components/LoadingSpinner';
 import SampleItemsSelector from './components/SampleItemsSelector';
+import PromptSelectItem from './components/PromptSelectItem';
 import ItemNotFound from './components/ItemNotFound';
 import ItemSection from './components/ItemSection';
 
@@ -42,17 +43,28 @@ const App = () => {
   };
 
   useEffect(() => {
-    setDataFetched(false);
-    const controller = new AbortController();
-    fetchData(itemUID, controller);
-    document.title = itemUID;
-    return () => {
-      controller.abort();
-    };
+    if (itemUID !== undefined) {
+      setDataFetched(false);
+      const controller = new AbortController();
+      fetchData(itemUID, controller);
+      document.title = itemUID;
+      return () => {
+        controller.abort();
+      };
+    } else {
+      setDataFetched(true);
+    }
   }, [itemUID]);
 
   if (dataFetched) {
-    if (Object.keys(itemMetadata).length === 0) {
+    if (itemUID === undefined) {
+      return (
+        <>
+          <SampleItemsSelector />
+          <PromptSelectItem />
+        </>
+      );
+    } else if (Object.keys(itemMetadata).length === 0) {
       return (
         <>
           <SampleItemsSelector />
