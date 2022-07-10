@@ -9,7 +9,7 @@ const ReviewStars = ({ reviewStars }) => {
       starsIcon = starsIcon.slice(0, 5);
     }
     const aria = 'Rating: ' + reviewStars + ' of 5 stars';
-    return <div aria-role={aria}>{starsIcon}</div>;
+    return <div aria-description={aria}>{starsIcon}</div>;
   } else {
     return null;
   }
