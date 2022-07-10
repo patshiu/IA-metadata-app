@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './RelatedItemSection.scss';
 
-import SectionTitle from './SectionTitle';
+import SectionTitle from '../SectionTitle';
 import RelatedItem from './RelatedItem';
 
 const RelatedItemsSection = ({ relatedItems }) => {

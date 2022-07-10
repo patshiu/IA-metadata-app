@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SectionTitle from './SectionTitle';
+import SectionTitle from '../SectionTitle';
 import ReviewItem from './ReviewItem';
 
 const ReviewsSection = ({ reviews }) => {

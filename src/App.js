@@ -4,14 +4,14 @@ import { useMatch } from 'react-router-dom';
 import './vitalCustom.scss';
 import './App.scss';
 
-import LoadingSpinner from './components/LoadingSpinner';
-import SampleItemsSelector from './components/SampleItemsSelector';
-import PromptSelectItem from './components/PromptSelectItem';
-import ItemNotFound from './components/ItemNotFound';
-import ItemSection from './components/ItemSection';
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
+import SampleItemsSelector from './components/SampleSelector/SampleItemsSelector';
+import PromptSelectItem from './components/PromptSelectItem/PromptSelectItem';
+import ItemNotFound from './components/ItemNotFound/ItemNotFound';
+import Item from './components/Item';
 
-import fetchMetadata from './services/metadata';
-import fetchRelated from './services/relatedItems';
+import fetchMetadata from './api/metadata';
+import fetchRelated from './api/relatedItems';
 
 const App = () => {
   const match = useMatch('/:id');
@@ -52,6 +52,7 @@ const App = () => {
         controller.abort();
       };
     } else {
+      document.title = 'IA Metata Viewer';
       setDataFetched(true);
     }
   }, [itemUID]);
@@ -75,7 +76,7 @@ const App = () => {
       return (
         <>
           <SampleItemsSelector />
-          <ItemSection
+          <Item
             itemIdentifier={itemUID}
             itemMetadata={itemMetadata}
             itemRelatedItems={itemRelatedItems}
