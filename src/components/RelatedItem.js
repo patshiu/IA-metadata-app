@@ -15,7 +15,9 @@ const RelatedItem = ({ itemSource, itemIdentifier }) => {
         />
         <div className="card-content">
           <h3>
-            <Link to={'/' + itemIdentifier}>{itemSource.title}</Link>
+            <strong>
+              <Link to={'/' + itemIdentifier}>{itemSource.title}</Link>
+            </strong>
           </h3>
           <p>Media type: {itemSource.mediatype}</p>
           <p>{itemSource.description ? itemSource.description : ''}</p>
