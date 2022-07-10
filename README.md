@@ -38,7 +38,7 @@ The dropdown contains sample items of each [media type](https://archive.org/serv
   
 Note that the iFrame media embeds only display for `texts`, `movies`, `software`, and `image` media types.  
   
-![Dropdown of sample media](dropdown-screenshot.png)
+![Screenshot of web app](screenshot-of-web-app.png)
   
 
   
