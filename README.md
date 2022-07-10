@@ -16,7 +16,7 @@ Runs the app in the development mode at `http://localhost:3000/`
 ### `CI=true yarn test`
 Runs the unit tests. 
 ### `CI=true yarn test --coverage`
-Shows Jest'sintegrated coverage reporter.
+Display Jest'sintegrated coverage reporter. 
   
 ## Build
 
@@ -31,13 +31,16 @@ serve -s build
 ---
 ## Using the App   
 Items may also be accessed with this URL pattern:\
-http://localhost:3000/{itemIdentifier}\
-https://ia-metadata-viewer.onrender.com/{itemIdentifier}\
+http://localhost:3000/{itemIdentifier}  
+https://ia-metadata-viewer.onrender.com/{itemIdentifier}  
   
 The dropdown contains sample items of each [media type](https://archive.org/services/docs/api/metadata-schema/index.html#mediatype). 
-![Dropdown of sample media](dropdown-screenshot.png)
   
 Note that the iFrame media embeds are only possible for `texts`, `movies`, `software`, and `image` media types.  
+  
+![Dropdown of sample media](dropdown-screenshot.png)
+  
+
   
 ---
 
