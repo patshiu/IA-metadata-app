@@ -25,20 +25,20 @@ const App = () => {
   const [itemRelatedItems, setItemRelatedItems] = useState({});
 
   const fetchData = async (itemIdentifier, controller) => {
-    Promise.all([
+    let [metadata, related] = await Promise.all([
       fetchMetadata(itemIdentifier, controller),
       fetchRelated(itemIdentifier, controller)
-    ]).then(([metadata, related]) => {
-      if (typeof metadata !== 'undefined') {
-        setItemMetadata(metadata);
-      }
-      if (typeof related !== 'undefined') {
-        setItemRelatedItems(related);
-      }
-      if (typeof metadata !== 'undefined' && typeof related !== 'undefined') {
-        setDataFetched(true);
-      }
-    });
+    ]);
+
+    if (typeof metadata !== 'undefined') {
+      setItemMetadata(metadata);
+    }
+    if (typeof related !== 'undefined') {
+      setItemRelatedItems(related);
+    }
+    if (typeof metadata !== 'undefined' && typeof related !== 'undefined') {
+      setDataFetched(true);
+    }
 
     window.scrollTo(0, 0);
   };
