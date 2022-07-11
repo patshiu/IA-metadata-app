@@ -28,6 +28,22 @@ If you wish to serve it from the `build` folder locally,
 yarn global add serve
 serve -s build
 ```
+
+## Deploy 
+This app is deployed using https://render.com/.\
+Pushing to main on this repo will trigger an automatic deploy.\
+If you would like to skip automatic deploy for a specific commit, include a skip phrase in the commit message.
+
+The skip phrase must be in the form of `[<KEYWORD> skip]` or `[skip <KEYWORD>]`,\
+Where `KEYWORD` should be one of `render`, `deploy`, or `cd`.
+
+Example:\
+```
+[render skip] Update README
+```
+
+
+
 ---
 ## Using the App   
 Items may also be accessed with this URL pattern:\
