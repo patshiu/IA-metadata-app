@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import './RelatedItemSection.scss';
 
-import SectionTitle from '../SectionTitle';
+import SectionTitle from '../SectionTitle/SectionTitle';
 import RelatedItem from './RelatedItem';
 
 const RelatedItemsSection = ({ relatedItems }) => {
-  if (!relatedItems) {
+  if (!relatedItems || relatedItems.length === 0) {
     return (
       <div className="row">
         <div className="section">

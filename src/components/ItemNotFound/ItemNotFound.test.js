@@ -1,14 +1,9 @@
 import React from 'react';
-import '@testing-library/jest-dom/extend-expect';
-import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 
 import ItemNotFound from './ItemNotFound';
 
-test('renders notice when item is not found', () => {
-  const itemIdentifier = 'Unfound Item';
-
-  render(<ItemNotFound itemIdentifier={itemIdentifier} />);
-
-  const element = screen.getByText("Unable to find the item 'Unfound Item'.");
-  expect(element).toBeDefined();
+it('renders item not found notice correctly', () => {
+  const tree = renderer.create(<ItemNotFound itemIdentifier="PhantomItem" />).toJSON();
+  expect(tree).toMatchSnapshot();
 });

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders loading notice and spinner correctly 1`] = `
+<div
+  className="row"
+  data-testid="loading-spinner-element"
+>
+  <div
+    className="section center"
+  >
+    <span
+      className="load large"
+      role="presentation"
+    />
+    <h1>
+      Loading...
+    </h1>
+  </div>
+</div>
+`;

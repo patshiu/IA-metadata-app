@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SectionTitle from '../SectionTitle';
+import SectionTitle from '../SectionTitle/SectionTitle';
 import ReviewItem from './ReviewItem';
 
 const ReviewsSection = ({ reviews }) => {
-  if (!reviews) {
+  if (!reviews || reviews.length === 0) {
     return (
       <div className="row">
         <div className="section item-reviews">

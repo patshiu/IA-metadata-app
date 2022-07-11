@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders item key info correctly 1`] = `
+<div
+  className="row"
+  data-testid="item-key-info"
+>
+  <div
+    className="section"
+  >
+    <h1>
+      This Is An Item Title
+    </h1>
+    <div
+      data-testid="item-description"
+    >
+      <div
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<h2>This a description of an item.</h2> <p>It may contain <a href=\\"https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics#\\">html</a>.</p>",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

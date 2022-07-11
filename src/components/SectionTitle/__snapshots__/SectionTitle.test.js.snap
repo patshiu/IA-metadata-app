@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders section title with item count correct 1`] = `
+<h2>
+  Section Title
+   
+  (6)
+</h2>
+`;
+
+exports[`renders section title with no item count correct 1`] = `
+<h2>
+  Section Title
+   
+</h2>
+`;

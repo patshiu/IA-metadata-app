@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders item not found notice correctly 1`] = `
+<div
+  className="row center"
+>
+  <h1>
+    Unable to find the item '
+    PhantomItem
+    '.
+  </h1>
+</div>
+`;
