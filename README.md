@@ -16,7 +16,7 @@ Runs the app in the development mode at `http://localhost:3000/`
 ### `CI=true yarn test`
 Runs the unit tests. 
 ### `CI=true yarn test --coverage`
-Display Jest'sintegrated coverage reporter. 
+Display Jest's integrated coverage reporter. 
   
 ## Build
 
