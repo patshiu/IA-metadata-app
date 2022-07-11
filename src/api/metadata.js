@@ -1,18 +1,24 @@
-import axios from 'axios';
-
-const fetchMetadata = (itemIdentifier, controller) => {
+const fetchMetadata = async (itemIdentifier, controller) => {
   const url = 'https://archive.org/metadata/' + itemIdentifier;
-  return axios
-    .get(url, { signal: controller.signal })
+  return fetch(url, {
+    signal: controller.signal,
+    method: 'GET',
+    headers: {
+      Accept: 'application/json'
+    }
+  })
     .then((res) => {
       if (res.status === 200) {
-        return res.data;
+        return res.json();
       } else {
-        throw new Error('Failed to fetch item metadata.');
+        throw new Error('Failed to fetchh item metadata.');
       }
     })
+    .then((jsonRes) => {
+      return jsonRes;
+    })
     .catch((e) => {
-      if (axios.isCancel(e)) {
+      if (e.name === 'AbortError') {
         console.log('Request for item metadata cancelled.');
       } else {
         console.log('An error occurred while fetching item metadata:', e);
