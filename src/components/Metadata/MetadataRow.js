@@ -9,7 +9,6 @@ const MetadataRow = ({ label, description }) => {
       parsedDescription += ', ' + item;
     }
     description = parsedDescription.slice(1);
-    console.log('description parsed');
   }
   return (
     <div>
