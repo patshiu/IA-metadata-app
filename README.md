@@ -52,7 +52,7 @@ https://ia-metadata-viewer.onrender.com/{itemIdentifier}
   
 The dropdown contains sample items of each [media type](https://archive.org/services/docs/api/metadata-schema/index.html#mediatype). 
   
-Note that the iFrame media embeds only display for `texts`, `movies`, `software`, and `image` media types.  
+Note that the iFrame media embed will only display for `texts`, `movies`, `software`, and `image` media types.  
   
 ![Screenshot of web app](screenshot-of-web-app.png)
   
