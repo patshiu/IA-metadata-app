@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders metadata row correcly with array input for description 1`] = `
+<div>
+  <dt>
+    subject
+  </dt>
+  <dd>
+     Futurism, World's Fairs: New York, 1939-40, Infrastructure: Roads and highways
+  </dd>
+</div>
+`;
+
+exports[`renders metadata row correcly with string input for description 1`] = `
+<div>
+  <dt>
+    subject
+  </dt>
+  <dd>
+    Futurism;World's Fairs: New York, 1939-40;Infrastructure: Roads and highways
+  </dd>
+</div>
+`;

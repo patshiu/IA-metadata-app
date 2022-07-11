@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import './MetadataRow.scss';
 
 const MetadataRow = ({ label, description }) => {
-  if (Array.isArray({ description })) {
+  if (Array.isArray(description)) {
     let parsedDescription = '';
-    description.map((item) => {
-      parsedDescription += ', ' + String(item);
-    });
-    description = parsedDescription;
+    for (let item of description) {
+      parsedDescription += ', ' + item;
+    }
+    description = parsedDescription.slice(1);
+    console.log('description parsed');
   }
   return (
     <div>

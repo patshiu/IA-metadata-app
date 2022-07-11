@@ -37,11 +37,11 @@ exports[`renders review section with several reviews correctly 1`] = `
         If I only had a heart
       </h3>
       <div>
-        <div
+        <span
           aria-description="Rating: 3 of 5 stars"
         >
           ★★★☆☆
-        </div>
+        </span>
          by 
         dynayellow
          on 
@@ -60,11 +60,11 @@ Not sure what need this short really fulfills, but it's fun (kinda like a Fractu
         A gem from the Late 50s - Charles and Rae Eames
       </h3>
       <div>
-        <div
+        <span
           aria-description="Rating: 5 of 5 stars"
         >
           ★★★★★
-        </div>
+        </span>
          by 
         Steve R
          on 
@@ -81,11 +81,11 @@ Not sure what need this short really fulfills, but it's fun (kinda like a Fractu
         Animation for scientists
       </h3>
       <div>
-        <div
+        <span
           aria-description="Rating: 3 of 5 stars"
         >
           ★★★☆☆
-        </div>
+        </span>
          by 
         Spuzz
          on 

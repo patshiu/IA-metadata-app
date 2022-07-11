@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders prompt to select an item correctly 1`] = `
+<div
+  className="row center"
+>
+  <p>
+    Please select an item from the dropdown.
+  </p>
+</div>
+`;

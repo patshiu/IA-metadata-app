@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const ReviewStars = ({ reviewStars }) => {
@@ -9,7 +10,7 @@ const ReviewStars = ({ reviewStars }) => {
       starsIcon = starsIcon.slice(0, 5);
     }
     const aria = 'Rating: ' + reviewStars + ' of 5 stars';
-    return <div aria-description={aria}>{starsIcon}</div>;
+    return <span aria-description={aria}>{starsIcon}</span>;
   } else {
     return null;
   }

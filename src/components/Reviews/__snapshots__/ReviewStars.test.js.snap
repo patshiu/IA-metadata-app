@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`if rating is undefined, renders nothing 1`] = `null`;
+
+exports[`takes rating as string and renders review stars with aria description 1`] = `
+<span
+  aria-description="Rating: 4 of 5 stars"
+>
+  ★★★★☆
+</span>
+`;
