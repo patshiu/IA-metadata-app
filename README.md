@@ -5,6 +5,12 @@ This app displays the metadata, reviews, and related items for any item in the i
 Requirements:  [Front-End Coding Challenge](https://docs.google.com/document/d/19tGoS6RbJcLhnYHsFmjFmRIyuHi6NtKIAWjglE6pE2w/edit#).
 
 
+
+Plan: [Page Architechure Doc](https://www.figma.com/file/DZtzIKWcoxCbZ1bT0IOv2n/IA-challenge-planning?node-id=0%3A1)
+![Screenshot of web app planning doc in figma](screenshot-of-planning-doc.png)
+
+
+
 ## Run Locally
 ### `yarn install`
 Installs dependencies.
