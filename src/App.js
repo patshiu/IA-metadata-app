@@ -39,8 +39,6 @@ const App = () => {
     if (typeof metadata !== 'undefined' && typeof related !== 'undefined') {
       setDataFetched(true);
     }
-
-    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
@@ -48,6 +46,7 @@ const App = () => {
       setDataFetched(false);
       const controller = new AbortController();
       fetchData(itemUID, controller);
+      window.scrollTo(0, 0);
       document.title = itemUID;
       return () => {
         controller.abort();
